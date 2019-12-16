@@ -1,6 +1,6 @@
-# Paper Reading
+# Legacy
 
-This repo records the papers I have read.
+I read these papers before 2019-12-16.
 
 ## SOCK: Rapid Task Provisioning with Serverless-Optimized Containers
 

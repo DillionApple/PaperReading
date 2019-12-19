@@ -1,6 +1,8 @@
 # Security
 
-## TextExerciser: Feedback-driven Text Input Exercising for Android Applications (CCS 2020) (2019-12-16)
+## Mobile Devices
+
+### TextExerciser: Feedback-driven Text Input Exercising for Android Applications (CCS 2020) (2019-12-16)
 
 The point of this paper is very interesting. It converts a UI testing problem into a security problem. More code coverage -> more chance to find security bugs.
 

@@ -25,7 +25,7 @@ Currently, in Kubernetes, the microservice (say pod) allocation method is quiet 
 
 Microservice allocation is NP hard. This paper uses refinforcement learning to solve the problem. State: CPU utilization, Actions: allocation, Reward: power comsumption.
 
-### Open Issues in Scheduling Microservices in the Cloud (Journal 2019 IEEE Cloud Computing)
+### Open Issues in Scheduling Microservices in the Cloud (Journal 2019 IEEE Cloud Computing) (2019-12-26)
 
 Open issues:
 

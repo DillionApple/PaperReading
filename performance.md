@@ -20,3 +20,17 @@ Currently, in Kubernetes, the microservice (say pod) allocation method is quiet 
 
 * Reduce cross rack communication cost (the network cost inside one rack (either same host or different hosts) is quiet small)
 * Resource usage complement (CPU/IO bound services), avoid bottleneck caused by host machine resource usage.
+
+### Fuzzy Reinforcement Learning based Microservice Allocation in Cloud Computing Environments (TENCON 2019) (2019-12-26) (bad, For reference)
+
+Microservice allocation is NP hard. This paper uses refinforcement learning to solve the problem. State: CPU utilization, Actions: allocation, Reward: power comsumption.
+
+### Open Issues in Scheduling Microservices in the Cloud (Journal 2019 IEEE Cloud Computing)
+
+Open issues:
+
+* Configuration Selection and Management: which resource configuration is suitable for this microservice considering it has different resource requirement and different SLO
+* Application Topology Specification and Composition: how to describe the topology among different microservices and manage the microservice life cycle according to the topology
+* Performance Characterization and Isolation: characterize microservice performance with different running environment settings (container on the VM or directly on the host machine, hardware based optimization, container live migration VS restarting, reduce container interference and contention)
+* Microservice Monitoring: monitoring in microservice granularity to better understanding the system in different aspects
+* Elastic Scheduling and Runtime Adaptation: how to optimize elasticity strategy (how to scale up the microservices efficiently)

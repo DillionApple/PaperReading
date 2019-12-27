@@ -36,3 +36,12 @@ Open issues:
 * Performance Characterization and Isolation: characterize microservice performance with different running environment settings (container on the VM or directly on the host machine, hardware based optimization, container live migration VS restarting, reduce container interference and contention)
 * Microservice Monitoring: monitoring in microservice granularity to better understanding the system in different aspects
 * Elastic Scheduling and Runtime Adaptation: how to optimize elasticity strategy (how to scale up the microservices efficiently)
+
+### CAUS: An Elasticity Controller for a Containerized Microservice (ICPE 2018) (2019-12-27)
+
+This paper analyzes the state of the art sacling strategy of Kubernetes and Amazone EC2. They are all based on a coarse-grained metrics and the scaling behavior have defects. This paper propose a method to scale the microservices in a more fine-grained way. It uses a control loop to collect the state of the system and decide what to do next. There are four basic conceptes in this work:
+
+1. Container capacity: how many requests can the container handle in a specific period of time
+2. Load intensity: how many new requets arrives in the last minute
+3. React: based on load intensity and container capacity, we can decide how many more container are needed
+4. Manage spare resources: to avoid cold start in scaling out, we need to preserve a certain number of spare containers.

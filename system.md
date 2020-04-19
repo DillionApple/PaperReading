@@ -17,7 +17,8 @@ The basic point of this paper is that compression-friendly readonly file system 
 这篇文章分四个层面来探究影响微服务系统性能的要素：
 
 * 硬件：CPU 指令解析、主频、Cache等
-* 网络和操作系统：内核、用户、库等的执行时间特点，网络开销与运行开销，将网络开销 Offload 到 FPGA 以得到提升* 服务管理：服务 down-grade 的传递，现有服务 scaling 的局限性
+* 网络和操作系统：内核、用户、库等的执行时间特点，网络开销与运行开销，将网络开销 Offload 到 FPGA 以得到提升
+* 服务管理：服务 down-grade 的传递，现有服务 scaling 的局限性			 
 * 应用及框架：语言的影响，serverless与EC2性能的区别
 
 同时文章还探究了不同微服务规模对性能的影响要素。
@@ -33,3 +34,17 @@ The basic point of this paper is that compression-friendly readonly file system 
 缺点：
 
 * 框架太大，每部分的分析只关注了这个部分的一个小侧面（比如硬件上，并没有关于内存、磁盘、网卡等的分析），不够完备，像是为了这个大框架而拼凑起来的。
+
+### Seer: Leveraging Big Data to Navigate the Complexity of Performance Debugging in Cloud Microservices (ASPLOS 2019) (2020-04-19)
+
+一句话总结：这篇文章通过给微服务系统插桩，来获取系统运行时信息，利用这些信息，再结合深度学习模型来预测 QoS Violation，同时结合其他的一些硬件信息，来为开发人员提供相关修复建议。
+
+优点：
+
+* 利用真实的微服务系统做实验
+* 结合了真实的 Case Study 来对实验结果进行更具体的分析。在这个过程中展示出随着时间推移
+
+缺点：
+
+* 既然 Violation 被提前“预警”出来并“修复”了，那如何这个 Violation 是真的呢？这样的实验、Claim 合理么？
+* 在文章前面 Claim 了对硬件数据的收集有利于为开发者提供 Debug 的有利信息，但是并没有具体说明
